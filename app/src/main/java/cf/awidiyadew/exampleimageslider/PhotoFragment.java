@@ -40,6 +40,7 @@ public class PhotoFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_photo, container, false);
         ImageView img = (ImageView) rootView.findViewById(R.id.detailPhoto);
         Picasso.with(getContext()).load(URL_).skipMemoryCache().into(img);
+
         return rootView;
     }
 

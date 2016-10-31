@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="cf.awidiyadew.exampleimageslider.MainActivity">
 
-    <cf.awidiyadew.exampleimageslider.MySliderLayout
+    <!--<cf.awidiyadew.exampleimageslider.MySliderLayout
         android:id="@+id/slider"
+        android:background="#000000"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="250dp"/>
 
     <com.daimajia.slider.library.Indicators.PagerIndicator
         android:id="@+id/custom_indicator"
@@ -21,5 +21,5 @@
         android:layout_below="@+id/slider"
         android:id="@+id/transformers"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="wrap_content"></ListView>-->
 </RelativeLayout>

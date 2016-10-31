@@ -20,4 +20,8 @@
         android:title="GitHub"
         >
     </item>
+    <item android:id="@+id/action_scrolling"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="Scrolling Activity"/>
 </menu>

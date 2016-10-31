@@ -5,10 +5,10 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatDialogFragment;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -35,7 +35,12 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_scrolling);
+
+        /* TAMBAHAN UTK SCROLL ACTIVITY */
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         mDemoSlider = (MySliderLayout)findViewById(R.id.slider);
 
         HashMap<String,String> url_maps = new HashMap<String, String>();
@@ -125,6 +130,8 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/daimajia/AndroidImageSlider"));
                 startActivity(browserIntent);
                 break;
+            case R.id.action_scrolling:
+                startActivity(new Intent(MainActivity.this, ScrollingActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
